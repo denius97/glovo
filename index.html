@@ -23,12 +23,24 @@
 
       gtag('config', 'AW-309276149');
     </script>
-    <!-- Event snippet for Клік зовнішнього посилання (2) conversion page -->
+
+    <!-- Event snippet for Клік зовнішнього посилання (2) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
-      gtag('event', 'conversion', {
-        send_to: 'AW-309276149/aA_xCO2L5tMDEPXbvJMB',
-      });
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          send_to: 'AW-309276149/aA_xCO2L5tMDEPXbvJMB',
+          event_callback: callback,
+        });
+        return false;
+      }
     </script>
+
     <meta
       http-equiv="refresh"
       content="3; URL=https://link.glovoapp.com/promo?c=JHR1N48&link_type=mgm_promo"
