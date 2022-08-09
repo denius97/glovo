@@ -1,11 +1,13 @@
 body {
   background-color: #ffc244ff;
-  padding: 30px 70px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
+  padding-right: 35px;
+  padding-left: 35px;
 }
 
 .helio-button {
@@ -29,13 +31,17 @@ header {
   padding-right: 8px;
   white-space: nowrap;
   text-decoration: none;
-  margin-left: 30px;
 }
 
 .helio-button:hover,
 .helio-button:focus {
   background-color: #00846bff;
   box-shadow: 0 3px 5px 0 #0000001a;
+}
+
+main {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .hiden-title {
